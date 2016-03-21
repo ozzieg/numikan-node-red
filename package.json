@@ -1,14 +1,14 @@
 {
-  "name": "node-red-salesforce",
+  "name": "numikan-node-red",
   "version": "0.0.1",
-  "description": "Node-RED for Heroku with Salesforce nodes.",
+  "description": "Base Node-RED template",
   "author": {
-    "name": "Jeff Douglas",
-    "url": "http://blog.jeffdouglas.com"
+    "name": "Ozzie Gurkan",
+    "url": "http://numikan.tumblr.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jeffdonthemic/node-red-salesforce.git"
+    "url": "git://github.com/ozzieg/numikan-node-red.git"
   },
   "engines": {
     "node": "0.12.x"
@@ -18,10 +18,7 @@
     "mongodb": "^2.0.39",
     "node-red": "0.x",
     "when": "~3.x",
-    "node-red-contrib-elasticsearch-jd": "0.0.x",
-    "node-red-contrib-salesforce": "0.0.x",
     "node-red-node-mongodb": "0.x",
-    "node-red-contrib-postgres": "0.x",
     "node-red-contrib-librato": "3.0.2",
     "node-red-contrib-particle": "./nodes/node-red-contrib-particle"
   }
