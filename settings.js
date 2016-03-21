@@ -23,7 +23,7 @@ var settings = module.exports = {
     serialReconnectTime: 15000,
     debugMaxLength: 10000000,
 
-    // Add the nodes in
+    // Add the nodes 
     nodesDir: path.join(__dirname,"nodes"),
 
     // Enable module reinstalls on start-up; this ensures modules installed
@@ -33,6 +33,8 @@ var settings = module.exports = {
     // Move the admin UI
     httpAdminRoot: '/red',
 
+    httpNodeRoot: '/nodes',
+    
     // Serve up the welcome page
     httpStatic: path.join(__dirname,"public"),
 
