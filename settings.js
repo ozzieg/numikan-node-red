@@ -18,13 +18,16 @@ var path = require("path");
 var when = require("when");
 
 var settings = module.exports = {
-    uiPort: 5880,
+    uiPort: process.env.PORT || 1880,
     mqttReconnectTime: 15000,
     serialReconnectTime: 15000,
     debugMaxLength: 10000000,
 
-    // Add the nodes 
+    // Add the nodes in
     nodesDir: path.join(__dirname,"nodes"),
+
+    // Blacklist the non-bluemix friendly nodes
+    nodesExcludes:[ '75-exec.js','35-arduino.js','36-rpi-gpio.js','25-serial.js','28-tail.js','50-file.js','31-tcpin.js','32-udp.js','23-watch.js' ],
 
     // Enable module reinstalls on start-up; this ensures modules installed
     // post-deploy are restored after a restage
@@ -33,14 +36,14 @@ var settings = module.exports = {
     // Move the admin UI
     httpAdminRoot: '/red',
 
-    httpNodeRoot: '/nodes',
-    
     // Serve up the welcome page
     httpStatic: path.join(__dirname,"public"),
 
     functionGlobalContext: { 
       process: process
     },
+
+    storageModule: require("./mongostorage")
 }
 
 if (process.env.NODE_RED_USERNAME && process.env.NODE_RED_PASSWORD) {
@@ -62,3 +65,6 @@ if (process.env.NODE_RED_USERNAME && process.env.NODE_RED_PASSWORD) {
     }
   }
 }
+
+settings.mongoAppname = 'nodered';
+settings.mongoUrl = process.env.MONGOLAB_URI;
