@@ -1,5 +1,5 @@
 {
-  "name": "Numikan Node Red"
+  "name": "Numikan Node Red",
   "description": "A Node-RED instance for Heroku with pre-installed Particle, MongoDB, and MQTT nodes.",
   "repository": "https://github.com/ozzieg/numikan-node-red",
   "keywords": [
