@@ -168,8 +168,12 @@ function getFlows() {
                 } else {
                     //load default flow
                     console.log("loading ./defaults/flow.json");
-                    var flow = JSON.parse(fs.readFileSync('./defaults/flow.json','utf8'));
-                    defer.resolve(flow);
+                    try {
+                        var flow = JSON.parse(fs.readFileSync('./defaults/flow.json','utf8'));
+                        defer.resolve(flow);                        
+                    } catch(Exception err) {
+                        defer.resolve();
+                    }
                 }
             }
         })
@@ -208,8 +212,12 @@ function getCredentials() {
                 } else {
                     //load default creds
                     console.log("loading ./defaults/flow_creds.json");
-                    var creds = JSON.parse(fs.readFileSync('./defaults/flow_creds.json','utf8'));
-                    defer.resolve(jconv(creds));
+                    try {
+                        var creds = JSON.parse(fs.readFileSync('./defaults/flow_creds.json','utf8'));
+                        defer.resolve(jconv(creds));                        
+                    } catch(Exception err) {
+                        defer.resolve();
+                    }
                 }
             }
         })
