@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MONGODB_URL=$MONGOLAB_URI
+MONGODB_URL=$MONGODB_URI
 POSTGRESDB_URL=$DATABASE_URL
 
 echo "Setting Environment Variables"
@@ -8,7 +8,7 @@ part1=${MONGODB_URL#mongodb://}
 MONGODB_URL=${part1%:*}
 echo $MONGODB_URL
 
-part1=${MONGOLAB_URI#mongodb:*:*:}
+part1=${MONGODB_URI#mongodb:*:*:}
 MONGODB_PORT=${part1%/*}
 MONGODB_DATABASE=${part1#*/}
 echo $MONGODB_PORT
