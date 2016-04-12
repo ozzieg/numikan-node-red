@@ -171,7 +171,7 @@ function getFlows() {
                     try {
                         var flow = JSON.parse(fs.readFileSync('./defaults/flow.json','utf8'));
                         defer.resolve(flow);                        
-                    } catch(Exception err) {
+                    } catch(err) {
                         defer.resolve();
                     }
                 }
@@ -215,7 +215,7 @@ function getCredentials() {
                     try {
                         var creds = JSON.parse(fs.readFileSync('./defaults/flow_creds.json','utf8'));
                         defer.resolve(jconv(creds));                        
-                    } catch(Exception err) {
+                    } catch(err) {
                         defer.resolve();
                     }
                 }
