@@ -19,6 +19,7 @@
     "node-red": "0.x",
     "when": "~3.x",
     "suncalc": "^1.6.0",
+    "eventsource": "^0.x",
     "firebase": "^2.2.3",
     "node-prowl": "^0.1.7",
     "node-red-node-mongodb": "0.x",
@@ -30,7 +31,6 @@
     "node-red-node-web-nodes": "^0.2.0",
     "node-red-node-random": "^0.0.6",
     "node-red-node-pushbullet": "^0.0.x",
-    "node-red-firebase": "^0.x",
     "node-red-contrib-firebase": "^1.x"
   }
 }
