@@ -32,6 +32,7 @@
     "node-red-node-web-nodes": "^0.2.0",
     "node-red-node-random": "^0.0.6",
     "node-red-node-pushbullet": "^0.0.x",
+    "node-red-firebase": "^0.x",
     "node-red-contrib-firebase": "^1.x"
   }
 }
