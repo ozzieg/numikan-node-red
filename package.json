@@ -19,8 +19,6 @@
     "node-red": "0.x",
     "when": "~3.x",
     "suncalc": "^1.6.0",
-    "request": "^2.72.0",
-    "eventsource": "^0.x",
     "firebase": "^2.2.3",
     "node-prowl": "^0.1.7",
     "node-red-node-mongodb": "0.x",
